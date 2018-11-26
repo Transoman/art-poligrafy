@@ -15,4 +15,12 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Slider
+  var heroSlider = new Swiper ('.hero-slider', {
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+
 });

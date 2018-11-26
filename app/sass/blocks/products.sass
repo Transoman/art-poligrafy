@@ -1,0 +1,83 @@
+.products
+  &__item
+  &__img-wrap
+    text-align: center
+  &__inner
+    position: relative
+    border-bottom: 1px solid $mercury
+    +transition
+    z-index: 1
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      border-radius: 5px
+      background-color: #fff
+      z-index: -1
+      +transition
+    &::after
+      content: ''
+      position: absolute
+      top: -15px
+      right: -15px
+      bottom: -115px
+      left: -15px
+      border: 1px solid $bittersweet
+      +transition
+      transform: scaleY(0)
+      z-index: -1
+    &:hover
+      &::before
+        left: -30px
+        top: -30px
+        right: -30px
+        bottom: -130px
+        box-shadow: 0 15px 30px rgba(#000, 0.15)
+      &::after
+        transform: scaleY(1)
+      .products
+        &__hidden
+          opacity: 1
+          visibility: visible
+          transform: translateY(0)
+  &__content
+    padding: 30px
+    h3
+      font-size: 24px
+      font-weight: 400
+      text-transform: none
+      &::after
+        content: ''
+        display: block
+        bottom: 0
+        left: 0
+        width: 25px
+        height: 2px
+        background-color: $bittersweet
+      a
+        color: $black-pearl
+        text-decoration: none
+        &:hover
+          color: $bittersweet
+  &__unit
+    margin: 0
+  &__hidden
+    position: absolute
+    padding: 0 30px
+    opacity: 0
+    visibility: hidden
+    +transition
+    transform: translateY(20px)
+    .btn
+      width: 100%
+      padding-top: 11px
+      padding-bottom: 11px
+      font-size: 10px
+      + .btn
+        margin-top: 10px
+      &--trs
+        padding-top: 10px
+        padding-bottom: 10px

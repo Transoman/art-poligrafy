@@ -33,16 +33,28 @@ img
 	height: auto
 
 a
+	font-family: $roboto
+	font-weight: 700
+	color: $bittersweet
+	text-transform: uppercase
+	text-decoration: underline
 	+transition
 	&:hover, &:focus
+		color: $bittersweet
 		text-decoration: none
 
 h1, h2, h3, h4, h5, h6
+	position: relative
 	font-family: $roboto
+	color: $black-pearl
 
 h1
 	font-size: 46px
 	font-weight: 400
+
+h2
+	margin-bottom: 40px
+	font-size: 36px
 
 /* Hidden element */
 .visually-hidden
@@ -86,3 +98,10 @@ h1
 		background-color: #e5e5e5
 		cursor: not-allowed
 		color: #fff
+	&--trs
+		background: none
+		padding-top: 14px
+		padding-bottom: 14px
+		color: $bittersweet
+		box-shadow: none
+		border: 1px solid $bittersweet

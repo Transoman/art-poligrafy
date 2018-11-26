@@ -1,24 +1,66 @@
 <header class="header">
-  <div class="container">
-    <div class="logo">
-      <img src="" alt="">
-    </div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-        <li><a href="#">Link 5</a></li>
-      </ul>
-    </nav>
-    <div class="phone">
-      <a href="tel:" class="phone__link">+6 000 000 00 00</a>
-      <a href="#" class="phone__callback callback_open">Callback</a>
-    </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__wrap">
+        <a href="#" class="logo">
+          <img src="img/logo.svg" alt="Art poligrafy" width="156" height="33">
+        </a>
 
-    <button class="nav-toggle">
-      <span class="nav-toggle__line"></span>
-    </button>
+        <div class="header__top-right">
+          <div class="phone header__phone">
+            <div class="phone__icon">
+              <svg>
+                <use xlink:href="img/symbols.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <a href="tel:+79772527755" class="phone__link">+7 (977) 252 77 55</a>
+            <p class="phone__desc">Ежедневно c 09:00—22:00</p>
+          </div>
+          <div class="phone header__phone">
+            <div class="phone__icon">
+              <svg>
+                <use xlink:href="img/symbols.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <a href="tel:+74997144247" class="phone__link">+7 (499) 714 42 47</a><br>
+            <a href="#" class="phone__callback callback_open">Бесплатная консультация</a>
+          </div>
+          <div class="phone header__phone">
+            <div class="phone__icon">
+              <svg>
+                <use xlink:href="img/symbols.svg#icon-pin"></use>
+              </svg>
+            </div>
+            <p class="phone__address">г. Москва, Окружной проезд, дом 8, строение 1, 4 этаж</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__wrap">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="has-child">
+              <a href="#">О нас</a>
+              <ul class="sublist">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Продукция</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Продукция</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle">
+          <span class="nav-toggle__line"></span>
+        </button>
+      </div>
+    </div>
   </div>
 </header>

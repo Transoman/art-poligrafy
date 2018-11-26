@@ -1,3 +1,57 @@
+.nav-list
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  li
+    position: relative
+    margin-right: 70px
+    &:last-child
+      margin-right: 0
+    &.has-child
+      > a
+        padding-right: 15px
+        position: relative
+        &::after
+          content: '\f0d7'
+          position: absolute
+          right: 0
+          top: 17px
+          font-family: $faw
+          font-weight: 900
+          font-size: 11px
+          color: $bittersweet
+    &:hover
+      > .sublist
+        display: block
+  a
+    display: block
+    padding: 15px 0
+    font-family: $roboto
+    font-weight: 700
+    color: #fff
+    text-transform: uppercase
+    &:hover
+      color: $bittersweet
+  .sublist
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 200px
+    padding: 10px
+    margin: 0
+    list-style: none
+    background-color: rgba(#000, 0.2)
+    z-index: 1
+    li
+      margin: 0
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    a
+      padding: 0
+
 .nav-toggle
   display: none
   position: absolute

@@ -1,0 +1,49 @@
+.testimonial
+  position: relative
+  .section-title
+    margin-left: -40px
+  &__link
+    position: relative
+    top: -30px
+    display: inline-block
+    z-index: 3
+
+.testimonial-slider
+  padding-bottom: 50px
+  .swiper-wrapper
+    align-items: center
+  &__item
+    position: relative
+    padding-left: 100px
+    opacity: 0.5
+    transform: scale(0.7)
+    +transition
+    &.swiper-slide-active
+      opacity: 1
+      transform: scale(1)
+  &__user
+    position: absolute
+    left: 0
+    top: 0
+    border-radius: 5px
+    box-shadow: 0 5px 15px rgba(#000, 0.15)
+  &__content
+    font-weight: 300
+  &__top
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    margin-bottom: 20px
+    h3
+      margin: 0
+      font-size: 18px
+      &::after
+        content: ''
+        display: block
+        width: 25px
+        height: 2px
+        background-color: $bittersweet
+  &__publish
+    font-size: 12px
+    font-weight: 500
+    color: $silver-chalice

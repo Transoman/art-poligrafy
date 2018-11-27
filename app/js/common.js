@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
   var heroSlider = new Swiper ('.hero-slider', {
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
     },
   });
 
@@ -27,6 +28,18 @@ jQuery(document).ready(function($) {
     slidesPerGroup: 6,
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
+    },
+  });
+
+  var testimonialSlider = new Swiper ('.testimonial-slider', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
     },
   });
 
@@ -40,5 +53,7 @@ jQuery(document).ready(function($) {
 
   simpleParallax(5, $('.parallax-square-1'));
   simpleParallax(-5, $('.parallax-square-2'));
+  simpleParallax(-7, $('.parallax-square-3'));
+  simpleParallax(10, $('.parallax-square-4'));
 
 });

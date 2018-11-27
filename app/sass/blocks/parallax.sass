@@ -1,6 +1,6 @@
 .parallax
   position: absolute
-  z-index: -1
+  // z-index: -1
 
   &-square
     &-1
@@ -21,3 +21,21 @@
       background-color: transparent
       filter: drop-shadow(0 0 20px rgba($bittersweet, 0.5))
       transform: rotate(45deg)
+    &-3
+      @extend .parallax-square-1
+      right: auto
+      left: 95%
+      bottom: auto
+      top: -150px
+      +size(215px)
+      border-width: 60px
+      // z-index: 1
+    &-4
+      @extend .parallax-square-2
+      right: 94%
+      left: auto
+      top: auto
+      bottom: -50px
+      +size(140px)
+      border-width: 40px
+      // z-index: 1

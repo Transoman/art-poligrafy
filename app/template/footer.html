@@ -39,15 +39,24 @@
 <script src="js/common.min.js"></script>
 <script>
     function initMap() {
-      var uluru = {lat: -25.363, lng: 131.044};
+      var uluru = {lat: 55.7946037, lng: 37.7432561};
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 16,
         center: uluru,
         disableDefaultUI: true
       });
+
+      var image = {
+        url: '../img/pin.svg',
+        size: new google.maps.Size(48, 60),
+        scaledSize: new google.maps.Size(48, 60)
+      };
+
       var marker = new google.maps.Marker({
         position: uluru,
-        map: map
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
       });
     }
   </script>

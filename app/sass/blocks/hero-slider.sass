@@ -31,3 +31,24 @@
     background-color: #fff
     &-active
       background-color: transparent
+
++media-breakpoint-down(sm)
+  .hero-slider
+    &__item
+      padding-top: 120px
+      padding-bottom: 200px
+    &__content
+      p
+        font-size: 16px
+
++media-breakpoint-down(xs)
+  .hero-slider
+    &__content
+      text-align: center
+      h1
+        &::after
+          width: 30%
+          margin: 0 auto 20px
+      p
+        br
+          display: none

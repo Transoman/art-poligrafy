@@ -1,0 +1,23 @@
+.parallax
+  position: absolute
+  z-index: -1
+
+  &-square
+    &-1
+      right: 92%
+      bottom: 200px
+      +size(500px)
+      border: 100px solid $alabaster
+      background-color: transparent
+      filter: drop-shadow(0 20px 40px rgba(#000, 0.1))
+      transform: rotate(45deg)
+    &-2
+      left: 94%
+      top: 300px
+      +size(165px)
+      border: 40px solid $bittersweet
+      border-image-source: linear-gradient($atomic-tangerine, $bittersweet)
+      border-image-slice: 20
+      background-color: transparent
+      filter: drop-shadow(0 0 20px rgba($bittersweet, 0.5))
+      transform: rotate(45deg)

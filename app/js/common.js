@@ -23,4 +23,15 @@ jQuery(document).ready(function($) {
     },
   });
 
+  function simpleParallax(intensity, element) {
+    $(window).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      var imgPos = scrollTop / intensity + 'px';
+      element.css('transform', 'translateY(' + imgPos + ') rotate(45deg)');
+    });
+  }
+
+  simpleParallax(5, $('.parallax-square-1'));
+  simpleParallax(-5, $('.parallax-square-2'));
+
 });

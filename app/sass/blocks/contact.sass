@@ -1,0 +1,78 @@
+.contact
+  padding: 0
+  .container
+    position: relative
+  &__wrap
+    position: absolute
+    right: 45px
+    top: -75px
+    max-width: 370px
+    background-color: #fff
+    border-radius: 5px
+    box-shadow: 0 10px 30px rgba(#000, 0.2)
+    z-index: 1
+    &:hover
+      .contact__wrap-bottom::before
+        animation: rotate 1s linear
+        animation-iteration-count: 3
+    &-top
+      padding: 50px 60px 5px
+    &-bottom
+      position: relative
+      padding: 20px 60px 50px
+      background-color: $alabaster
+      z-index: 1
+      overflow: hidden
+      &::before
+        content: ''
+        position: absolute
+        bottom: 25px
+        right: 30px
+        +size(106px, 98px)
+        background: url('../img/icon/icon-envelop.svg') no-repeat
+        transform: rotate(40deg)
+        z-index: -1
+        +transition
+      h3
+        font-size: 24px
+        font-weight: 400
+      p
+        font-weight: 300
+      .btn
+        width: 90%
+  .section-title
+    margin-bottom: 30px
+    margin-left: -40px
+    span
+      padding-right: 20px
+      &::before
+        height: 70px
+  &__item
+    display: flex
+    margin-bottom: 10px
+    strong
+      flex-shrink: 0
+      margin-right: 5px
+      font-family: $roboto
+      color: $bittersweet
+    span
+      font-weight: 300
+    a
+      color: $main-color
+      font-weight: 300
+      text-decoration: none
+      text-transform: none
+      &:hover
+        color: $bittersweet
+
+#map
+  height: 400px
+  width: 100%
+
+@keyframes rotate
+  0%
+    transform: rotate(40deg)
+  50%
+    transform: rotate(20deg)
+  100%
+    transform: rotate(40deg)

@@ -1,0 +1,31 @@
+.partners
+  .section-title
+    margin-bottom: 60px
+    text-align: center
+    span
+      &::before
+        height: 70px
+        left: 20px
+      &::after
+        content: ''
+        position: absolute
+        bottom: auto
+        right: 20px
+        left: auto
+        top: 0
+        width: 1px
+        height: 70px
+        background-color: $bittersweet
+
+.partners-slider
+  padding-bottom: 40px
+  .swiper-wrapper
+    align-items: center
+  &__item
+    text-align: center
+    img
+      +transition(0.5s)
+      &:hover
+        transform: scale(1.1)
+  .swiper-pagination
+    bottom: 0

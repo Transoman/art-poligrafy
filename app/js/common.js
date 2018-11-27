@@ -17,7 +17,14 @@ jQuery(document).ready(function($) {
 
   // Slider
   var heroSlider = new Swiper ('.hero-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 
+  var partnersSlider = new Swiper ('.partners-slider', {
+    slidesPerView: 6,
+    slidesPerGroup: 6,
     pagination: {
       el: '.swiper-pagination',
     },

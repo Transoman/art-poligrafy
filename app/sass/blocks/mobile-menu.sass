@@ -1,0 +1,36 @@
+.mobile-menu
+  padding: 40px 20px
+  position: fixed
+  right: 0
+  top: 0
+  bottom: 0
+  width: 320px
+  background-color: rgba(#000, 0.95)
+  overflow-y: auto
+  transform: translateX(100%)
+  +transition
+  &.open
+    transform: translateX(0)
+  .nav-list
+    flex-direction: column
+    margin-bottom: 20px
+    li
+      margin-right: 0
+      &.has-child
+        > a::after
+          top: 12px
+    a
+      display: inline-block
+      padding: 10px 0
+    .sublist
+      position: static
+      top: auto
+      left: auto
+      display: block
+      width: auto
+      padding-top: 0
+      padding-bottom: 0
+      li
+        margin: 0
+  &__phone
+    margin-bottom: 20px

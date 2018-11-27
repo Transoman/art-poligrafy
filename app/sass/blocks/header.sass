@@ -21,3 +21,23 @@
     max-width: 240px
     &:last-child
       margin-right: 0
+
++media-breakpoint-down(lg)
+  .header
+    &__phone
+      margin-right: 30px
+
++media-breakpoint-down(md)
+  .header
+    &__phone
+      &-address
+        display: none
+
++media-breakpoint-down(sm)
+  .header
+    &__wrap
+      position: relative
+    &__phone
+      display: none
+    &__bottom
+      display: none

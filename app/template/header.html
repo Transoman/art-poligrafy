@@ -25,7 +25,7 @@
             <a href="tel:+74997144247" class="phone__link">+7 (499) 714 42 47</a><br>
             <a href="#" class="phone__callback callback_open">Бесплатная консультация</a>
           </div>
-          <div class="phone header__phone">
+          <div class="phone header__phone header__phone-address">
             <div class="phone__icon">
               <svg>
                 <use xlink:href="img/symbols.svg#icon-pin"></use>
@@ -33,6 +33,10 @@
             </div>
             <p class="phone__address">г. Москва, Окружной проезд, дом 8, строение 1, 4 этаж</p>
           </div>
+
+          <button class="nav-toggle">
+            <span class="nav-toggle__line"></span>
+          </button>
         </div>
       </div>
     </div>
@@ -41,7 +45,7 @@
   <div class="header__bottom">
     <div class="container">
       <div class="header__wrap">
-        <nav class="nav">
+        <nav class="header__nav nav">
           <ul class="nav-list">
             <li class="has-child">
               <a href="#">О нас</a>
@@ -57,10 +61,54 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-        <button class="nav-toggle">
-          <span class="nav-toggle__line"></span>
-        </button>
+
       </div>
     </div>
+  </div>
+
+  <div class="mobile-menu">
+
+    <ul class="nav-list">
+      <li class="has-child">
+        <a href="#">О нас</a>
+        <ul class="sublist">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Продукция</a></li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Продукция</a></li>
+      <li><a href="#">Портфолио</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+
+    <div class="phone mobile-menu__phone">
+      <div class="phone__icon">
+        <svg>
+          <use xlink:href="img/symbols.svg#icon-phone"></use>
+        </svg>
+      </div>
+      <a href="tel:+79772527755" class="phone__link">+7 (977) 252 77 55</a>
+      <p class="phone__desc">Ежедневно c 09:00—22:00</p>
+    </div>
+    <div class="phone mobile-menu__phone">
+      <div class="phone__icon">
+        <svg>
+          <use xlink:href="img/symbols.svg#icon-phone"></use>
+        </svg>
+      </div>
+      <a href="tel:+74997144247" class="phone__link">+7 (499) 714 42 47</a><br>
+      <a href="#" class="phone__callback callback_open">Бесплатная консультация</a>
+    </div>
+    <div class="phone mobile-menu__phone">
+      <div class="phone__icon">
+        <svg>
+          <use xlink:href="img/symbols.svg#icon-pin"></use>
+        </svg>
+      </div>
+      <p class="phone__address">г. Москва, Окружной проезд, дом 8, строение 1, 4 этаж</p>
+    </div>
+
   </div>
 </header>

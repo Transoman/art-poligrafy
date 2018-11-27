@@ -60,6 +60,9 @@ h2
 	margin-bottom: 40px
 	font-size: 36px
 
+section
+	padding: 90px 0 45px
+
 /* Hidden element */
 .visually-hidden
 	position: absolute
@@ -110,3 +113,26 @@ h2
 		color: $bittersweet
 		box-shadow: none
 		border: 1px solid $bittersweet
+
+.section-title
+	font-weight: 400
+	line-height: 1
+	span
+		position: relative
+		display: inline-block
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: -20px
+			width: 1px
+			height: 200px
+			background-color: $bittersweet
+		&::after
+			content: ''
+			position: absolute
+			bottom: -10px
+			left: -40px
+			right: -20px
+			height: 1px
+			background-color: $bittersweet

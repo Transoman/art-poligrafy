@@ -24,6 +24,8 @@
   &__img-wrap
     text-align: center
     overflow: hidden
+    img
+      +transition(0.5s)
   &__inner
     position: relative
     display: flex
@@ -147,6 +149,28 @@
       &:nth-child(2n)
         &::after
           display: none
+    &__inner
+      &:hover
+        z-index: 1
+        &::before
+          display: none
+        &::after
+          display: none
+        .products__img-wrap img
+          transform: scale(1.1)
+    &__hidden
+      position: static
+      top: auto
+      padding-bottom: 20px
+      opacity: 1
+      visibility: visible
+      transform: none
+
++media-breakpoint-down(sm)
+  .products
+    &__content
+      h3
+        font-size: 21px
 
 +media-breakpoint-down(xs)
   .products

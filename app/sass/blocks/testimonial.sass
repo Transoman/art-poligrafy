@@ -56,9 +56,14 @@
       top: auto
       left: 50%
       transform: translateX(-50%)
-
   .testimonial-slider
     margin-bottom: 30px
+
++media-breakpoint-down(xs)
+  .testimonial
+    padding-bottom: 0
+    .section-title
+      margin-left: 0
 
 +r(480)
   .testimonial-slider
@@ -72,6 +77,5 @@
     &__top
       flex-direction: column
       align-items: center
-
       h3
         margin-bottom: 10px

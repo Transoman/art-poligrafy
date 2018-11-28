@@ -80,6 +80,8 @@
 <script src="js/script.js"></script>
 <script src="js/common.min.js"></script>
 <script>
+  window.addEventListener('load', function() {
+    if (document.getElementById('map')) {
     function initMap() {
       var uluru = {lat: 55.7946037, lng: 37.7432561};
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -101,5 +103,10 @@
         animation: google.maps.Animation.DROP,
       });
     }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
+
+    initMap();
+  }
+  });
+  
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4"></script>

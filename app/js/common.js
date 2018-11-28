@@ -52,13 +52,22 @@ jQuery(document).ready(function($) {
 
   var testimonialSlider = new Swiper ('.testimonial-slider', {
     slidesPerView: 3,
-    spaceBetween: 0,
     centeredSlides: true,
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+    }
   });
 
   function simpleParallax(intensity, element) {

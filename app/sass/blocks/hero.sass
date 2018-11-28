@@ -1,3 +1,43 @@
 .hero
   padding-top: 240px
   padding-bottom: 140px
+  background:
+    repeat: no-repeat
+    position: center top
+    size: cover
+  color: #fff
+  .container
+    position: relative
+  &__content
+    h1
+      color: #fff
+      &::after
+        content: ''
+        display: block
+        width: 30%
+        height: 2px
+        margin-top: 5px
+        margin-bottom: 20px
+        background-color: $bittersweet
+    p
+      font-size: 20px
+      font-weight: 300
+
++media-breakpoint-down(sm)
+  .hero
+    padding-top: 120px
+    padding-bottom: 140px
+    &__content
+      p
+        font-size: 16px
+
++media-breakpoint-down(xs)
+  .hero
+    &__content
+      text-align: center
+      h1
+        &::after
+          margin: 0 auto 20px
+      p
+        br
+          display: none

@@ -1,0 +1,23 @@
+.breadcrumbs
+  position: absolute
+  right: 15px
+  bottom: 0
+  max-width: 300px
+  font-size: 12px
+  font-weight: 300
+  color: $gray
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  a
+    font-weight: 500
+    color: $gray
+    text-transform: none
+    &:hover, &:focus
+      color: $bittersweet
+
++media-breakpoint-down(md)
+  .breadcrumbs
+    position: static
+    right: auto
+    bottom: auto

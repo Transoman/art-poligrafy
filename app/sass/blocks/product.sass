@@ -1,0 +1,27 @@
+.product
+  position: relative
+  padding-top: 0
+  .container
+    position: relative
+    z-index: 1
+  &__slider
+    width: 54%
+    margin: 0
+    padding-bottom: 90px
+    border: 1px solid $mercury
+    .swiper-button-next, .swiper-button-prev
+      +size(40px)
+      border-radius: 3px
+      background: #fff
+      box-shadow: 0 5px 15px rgba(#000, 0.1)
+      text-align: center
+      line-height: 40px
+      +transition
+      .fas
+        font-size: 13px
+        color: $bittersweet
+        +transition
+      &:hover
+        background-color: $bittersweet
+        .fas
+          color: #fff

@@ -1,0 +1,56 @@
+.widget
+  background-color: #fff
+  box-shadow: 0 15px 30px rgba(#000, 0.15)
+  &__title
+    margin-botom: 15px
+    padding: 25px 30px
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    background-color: $alabaster
+  &__content
+    padding: 0 30px 30px
+
+.categories-list
+  margin: 0
+  padding: 0
+  list-style: none
+  a
+    position: relative
+    display: inline-block
+    padding-left: 10px
+    font-size: 16px
+    color: $scorpion
+    text-decoration: none
+    text-transform: none
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 10px
+      +size(4px)
+      border-radius: 50%
+      background-color: $scorpion
+      +transition
+    &:hover
+      color: $bittersweet
+      &::before
+        background-color: $bittersweet
+  li
+    position: relative
+    margin-bottom: 15px
+    &:last-child
+      margin-bottom: 0
+    &.active
+      a
+        color: $bittersweet
+        text-decoration: underline
+        &::after
+          content: '\f105'
+          display: inline-block
+          vertical-align: middle
+          font-family: $faw
+          font-size: 11px
+          margin-left: 5px
+        &::before
+          background-color: $bittersweet

@@ -11,6 +11,7 @@
     border-radius: 5px
     box-shadow: 0 10px 30px rgba(#000, 0.2)
     z-index: 1
+    overflow: hidden
     &:hover
       .contact__wrap-bottom::before
         animation: rotate 1s linear
@@ -76,3 +77,40 @@
     transform: rotate(20deg)
   100%
     transform: rotate(40deg)
+
++media-breakpoint-down(sm)
+  .contact
+    &__wrap
+      position: relative
+      right: auto
+      top: auto
+      bottom: -70px
+      margin: 0 auto
+      max-width: none
+
+  #map
+    height: 400px
+
++r(480)
+  .contact
+    .section-title
+      text-align: center
+      margin-left: 0
+      span
+        padding-right: 40px
+        &::before
+          height: 50px
+        &::after
+          content: ''
+          position: absolute
+          right: 20px
+          top: 0
+          width: 1px
+          height: 50px
+          background-color: $bittersweet
+    &__wrap
+      &-top
+        padding: 20px
+      &-bottom
+        padding: 20px
+        text-align: center

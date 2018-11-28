@@ -30,6 +30,24 @@ jQuery(document).ready(function($) {
       el: '.swiper-pagination',
       clickable: true
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+      992: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+      767: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      480: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+    }
   });
 
   var testimonialSlider = new Swiper ('.testimonial-slider', {

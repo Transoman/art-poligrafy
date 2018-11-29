@@ -103,6 +103,8 @@ jQuery(document).ready(function($) {
     simpleParallax(5, $('.parallax-square-5'));
     simpleParallax(-2, $('.parallax-square-6'));
     simpleParallax(5, $('.parallax-square-7'));
+    simpleParallax(-5, $('.parallax-square-8'));
+    simpleParallax(5, $('.parallax-square-9'));
   }
 
   // Masked input

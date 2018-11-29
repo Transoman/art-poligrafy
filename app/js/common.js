@@ -15,6 +15,11 @@ jQuery(document).ready(function($) {
     }
   });
 
+  $('.widget__title').click(function() {
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+  });
+
   // Slider
   var heroSlider = new Swiper ('.hero-slider', {
     pagination: {

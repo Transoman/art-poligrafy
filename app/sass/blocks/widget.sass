@@ -2,14 +2,13 @@
   background-color: #fff
   box-shadow: 0 15px 30px rgba(#000, 0.15)
   &__title
-    margin-botom: 15px
     padding: 25px 30px
     font-size: 16px
     font-weight: 700
     text-transform: uppercase
     background-color: $alabaster
   &__content
-    padding: 0 30px 30px
+    padding: 10px 30px 30px
 
 .categories-list
   margin: 0
@@ -54,3 +53,34 @@
           margin-left: 5px
         &::before
           background-color: $bittersweet
+
++media-breakpoint-down(md)
+  .widget
+    position: relative
+    &__title
+      position: relative
+      margin-bottom: 50px
+      &::after
+        content: '\f107'
+        font-family: $faw
+        font-size: 18px
+        position: absolute
+        right: 30px
+        top: 50%
+        transform: translateY(-50%)
+        +transition(0.5s)
+      &.active
+        &::after
+          transform: translateY(-50%) rotate(-180deg)
+    &__content
+      display: none
+      &.active
+        position: absolute
+        left: 0
+        right: 0
+        top: 100%
+        display: block
+        z-index: 2
+        background-color: #fff
+        box-shadow: 0 15px 30px rgba(#000, 0.15)
+        animation: slideUp 0.5s ease

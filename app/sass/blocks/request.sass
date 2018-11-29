@@ -1,0 +1,37 @@
+.request
+  .section-title
+    margin-bottom: 20px
+    margin-left: -40px
+    span
+      &::before
+        height: 150px
+  &__content
+    position: relative
+    p
+      float: left
+      max-width: 490px
+      font-size: 16px
+      font-weight: 300
+    .btn
+      float: right
+
++media-breakpoint-down(lg)
+  .request
+    &__content
+      p
+        float: none
+        max-width: none
+        br
+          display: none
+      .btn
+        float: none
+
++media-breakpoint-down(xs)
+  .request
+    .section-title
+      margin-left: 0
+      span
+        &::before
+          height: 50px
+    &__content
+      text-align: center

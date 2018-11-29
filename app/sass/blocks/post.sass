@@ -1,0 +1,34 @@
+.post
+  padding-top: 0
+  padding-bottom: 80px
+  .container
+    position: relative
+    z-index: 1
+  &__content
+    column-count: 2
+    column-gap: 65px
+    figure
+      img
+        display: block
+        margin: 0 auto
+        margin-bottom: 20px
+    figcaption
+      margin-left: 20px
+      padding: 5px 15px
+      border-left: 1px solid $bittersweet
+      font-family: $roboto
+      p
+        margin: 0
+
++media-breakpoint-down(md)
+  .post
+    &__content
+      column-count: 1
+
++media-breakpoint-down(sm)
+  .post
+    padding-bottom: 40px
+    &__content
+      figure
+        float: none
+        margin-right: 0

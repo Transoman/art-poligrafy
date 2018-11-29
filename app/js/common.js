@@ -105,4 +105,68 @@ jQuery(document).ready(function($) {
     simpleParallax(5, $('.parallax-square-7'));
   }
 
+  // Masked input
+  var element = document.querySelectorAll('input[type="tel"]');
+  var maskOptions = {
+    mask: '+{7} (000) 000-00-00'
+  };
+
+  if (element) {
+    for (var i = 0; i < element.length; i++) {
+      var mask = new IMask(element[i], maskOptions);
+    }
+  }
+
+  $('.products__item .order_open').click(function() {
+    var title = $(this).parents('.products__item').find('h3').find('a').text();
+    $('#order h3').text('Заказать ' + title);
+    $('#order input[name="subject"]').val('Заказ ' + title);
+  });
+
+  $('.products__item .cost_open').click(function() {
+    var title = $(this).parents('.products__item').find('h3').find('a').text();
+    $('#cost input[name="subject"]').val('Узнать стоимость (' + title + ')');
+  });
+
+  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
+    return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
+  }, "Введите Ваш телефон");
+
+  /* Валидация формы */
+  $('.repeat-form').each(function(i, el) {
+    $(this).addClass('repeat-form-' + i);
+
+    $(".repeat-form-" + i).validate({
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+      },
+      rules: {
+        "phone": {
+          required: true,
+          phoneno: true
+        }
+      },
+      submitHandler: function(form) {
+        var t = $('.repeat-form-' + i).serialize();
+        ajaxSend('.repeat-form-' + i, t);
+      }
+    });
+  });
+
+  /* Функцыя для отправки формы */
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: "POST",
+      url: "sendmail.php",
+      data: data,
+      success: function() {
+        $(".modal").popup("hide");
+        $("#thanks").popup("show");
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
 });

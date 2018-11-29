@@ -45,19 +45,19 @@
     Close
     <span class="modal__close-line"></span>
   </button>
-  <h3>Обратный звонок</h3>
+  <h3>Заказать звонок</h3>
   <p>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</p>
 
-  <form action="sendmail.php" class="row form callback-form" method="post">
+  <form action="sendmail.php" class="row form repeat-form" method="post">
 
-    <input type="hidden" name="subject" value="Обратный звонок">
+    <input type="hidden" name="subject" value="Заказать звонок">
 
     <div class="col-sm-12 form-group">
       <input type="text" class="form__field" name="name" placeholder="Ваше имя" required>
     </div>
 
     <div class="col-sm-12 form-group">
-      <input type="tel" name="phone" class="form__field" required placeholder="+7 (___) ___-__-__">
+      <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
     </div>
 
     <div class="col-sm-12 form-group">
@@ -66,6 +66,114 @@
 
   </form>
 </div>
+
+<div id="consultation" class="modal">
+    <button class="consultation_close modal__close">
+      Close
+      <span class="modal__close-line"></span>
+    </button>
+    <h3>Бесплатная консультация</h3>
+    <p>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</p>
+  
+    <form action="sendmail.php" class="row form repeat-form" method="post">
+  
+      <input type="hidden" name="subject" value="Бесплатная консультация">
+  
+      <div class="col-sm-12 form-group">
+        <input type="text" class="form__field" name="name" placeholder="Ваше имя" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="submit" class="btn form__btn" name="submit" value="Заказать">
+      </div>
+  
+    </form>
+  </div>
+
+<div id="request" class="modal">
+  <button class="request_close modal__close">
+    Close
+    <span class="modal__close-line"></span>
+  </button>
+  <h3>Заявка на рассчет</h3>
+  <p>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</p>
+
+  <form action="sendmail.php" class="row form repeat-form" method="post">
+
+    <input type="hidden" name="subject" value="Заявка на рассчет">
+
+    <div class="col-sm-12 form-group">
+      <input type="text" class="form__field" name="name" placeholder="Ваше имя" required>
+    </div>
+
+    <div class="col-sm-12 form-group">
+      <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
+    </div>
+
+    <div class="col-sm-12 form-group">
+      <input type="submit" class="btn form__btn" name="submit" value="Заказать">
+    </div>
+
+  </form>
+</div>
+
+<div id="cost" class="modal">
+    <button class="cost_close modal__close">
+      Close
+      <span class="modal__close-line"></span>
+    </button>
+    <h3>Узнать стоимость</h3>
+    <p>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</p>
+  
+    <form action="sendmail.php" class="row form repeat-form" method="post">
+  
+      <input type="hidden" name="subject" value="Узнать стоимость">
+  
+      <div class="col-sm-12 form-group">
+        <input type="text" class="form__field" name="name" placeholder="Ваше имя" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="submit" class="btn form__btn" name="submit" value="Заказать">
+      </div>
+  
+    </form>
+  </div>
+
+<div id="order" class="modal">
+    <button class="order_close modal__close">
+      Close
+      <span class="modal__close-line"></span>
+    </button>
+    <h3>Заказать</h3>
+    <p>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</p>
+  
+    <form action="sendmail.php" class="row form repeat-form" method="post">
+  
+      <input type="hidden" name="subject" value="Заказ">
+  
+      <div class="col-sm-12 form-group">
+        <input type="text" class="form__field" name="name" placeholder="Ваше имя" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="tel" name="phone" class="form__field" placeholder="Ваш телефон" required>
+      </div>
+  
+      <div class="col-sm-12 form-group">
+        <input type="submit" class="btn form__btn" name="submit" value="Заказать">
+      </div>
+  
+    </form>
+  </div>
 
 <div id="thanks" class="modal">
   <button class="thanks_close modal__close">

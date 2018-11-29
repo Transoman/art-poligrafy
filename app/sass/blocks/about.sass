@@ -1,0 +1,37 @@
+.about
+  padding-top: 0
+  padding-bottom: 170px
+  .container
+    position: relative
+    z-index: 1
+  .section-title
+    display: inline-block
+    margin-left: -40px
+  &__content
+    padding-left: 40px
+    p
+      line-height: 1.7
+
++media-breakpoint-down(lg)
+  .about
+    &__content
+      img
+        width: 40%
+
++media-breakpoint-down(sm)
+  .about
+    padding-bottom: 0
+    &__content
+      padding-left: 0
+
++media-breakpoint-down(xs)
+  .about
+    .section-title
+      display: block
+      margin-left: 0
+    &__content
+      img
+        display: block
+        width: auto
+        float: none
+        margin: 0 auto 20px

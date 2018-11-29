@@ -1,0 +1,90 @@
+.blog
+  padding-top: 0
+  padding-bottom: 80px
+  .container
+    position: relative
+    z-index: 1
+  &__item
+    padding-top: 10px
+    padding-bottom: 20px
+    margin-bottom: 10px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 30px
+      right: 30px
+      height: 1px
+      background-color: $mercury
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 10px
+      width: 1px
+      background-color: $mercury
+    &:hover
+      .blog__img-wrap
+        img
+          transform: scale(1.1)
+    &:nth-child(3n)
+      &::after
+        display: none
+  &__img-wrap
+    margin-bottom: 30px
+    overflow: hidden
+    box-shadow: 0 15px 30px rgba(#000, 0.15)
+    img
+      width: 100%
+      +transition(1s)
+  &__content
+    padding: 0 20px
+    h3
+      margin-bottom: 20px
+      font-size: 24px
+      font-weight: 400
+      line-height: 1.3
+      a
+        font-weight: 400
+        color: $mine-shaft
+        text-decoration: none
+        text-transform: none
+        &:hover
+          color: $bittersweet
+  &__publish
+    font-weight: 300
+    color: $dasty-gray
+  &__link
+    float: right
+    font-size: 12px
+  &__btn-wrap
+    margin-top: 40px
+
++media-breakpoint-down(md)
+  .blog
+    &__item
+      &:nth-child(3n)
+        &:after
+          display: block
+      &:nth-child(2n)
+        &::after
+          display: none
+
++media-breakpoint-down(sm)
+  .blog
+    &__item
+      &::after
+        display: none
+      &:nth-child(3n)
+        &::after
+          display: none
+
++media-breakpoint-down(xs)
+  .blog
+    padding-bottom: 40px
+    &__content
+      h3
+        font-size: 18px
+    &__btn-wrap
+      margin-top: 20px

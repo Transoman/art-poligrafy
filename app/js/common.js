@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
     });
   }
 
-  if ($(window).width() >= 992) {
+  if ($(window).width() >= 768) {
     simpleParallax(5, $('.parallax-square-1'));
     simpleParallax(-5, $('.parallax-square-2'));
     simpleParallax(-7, $('.parallax-square-3'));

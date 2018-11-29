@@ -20,6 +20,36 @@ jQuery(document).ready(function($) {
     $(this).next().toggleClass('active');
   });
 
+  // Smooth scroll
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        var heightHeader = $('.header').outerHeight();
+        var offset = heightHeader + 50;
+        $('.mobile-menu').removeClass('open');
+        $('.nav-toggle').removeClass('active');
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 1000);
+      }
+    }
+  });
+
   // Slider
   var heroSlider = new Swiper ('.hero-slider', {
     pagination: {

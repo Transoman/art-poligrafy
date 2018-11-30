@@ -112,3 +112,8 @@
 +media-breakpoint-down(sm)
   .nav-toggle
     display: block
+
+@media (max-height: 768px) and (min-width: 768px) and (max-width: 1366px)
+  .nav-list .sublist
+    overflow-y: auto
+    height: calc(100vh - 137px)

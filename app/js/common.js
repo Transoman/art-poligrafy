@@ -43,6 +43,10 @@ jQuery(document).ready(function($) {
     $(this).next().toggleClass('active');
   });
 
+  $('a[href="#"]').click(function(e) {
+    e.preventDefault();
+  });
+
   // Smooth scroll
   $('a[href*="#"]')
   // Remove links that don't actually link to anything

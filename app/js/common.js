@@ -1,4 +1,27 @@
+$(window).on('load', function () {
+  $preloader = $('.preloader'),
+  $loader = $preloader.find('.preloader__wrap');
+  if ( localStorage.getItem('preloader') != 'hide') {
+    $loader.delay(2000).fadeOut();
+    $preloader.delay(2000).fadeOut('slow');
+    localStorage.setItem('preloader', 'hide');
+  }
+  $loader.fadeOut();
+  $preloader.fadeOut('slow');
+
+  setTimeout(function() {
+    $loader.remove();
+    $preloader.remove();
+  }, 3000);
+});
+
 jQuery(document).ready(function($) {
+
+  if ( localStorage.getItem('preloader') == 'hide') {
+    $preloader = $('.preloader'),
+    $loader = $preloader.find('.preloader__wrap');
+    $loader.remove();
+  }
 
   // Toggle nav menu
   $('.nav-toggle').on('click', function (e) {

@@ -4,7 +4,7 @@
   $to = 'Elena357910@yandex.com';
 
   if ( isset($_POST) ) {
-    if (!$_POST['r2d2']) {
+    if (!isset($_POST['r2d2'])) {
       $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : '';
       $phone = isset($_POST['phone']) ? htmlspecialchars(trim($_POST['phone'])) : '';
       $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : '';

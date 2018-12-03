@@ -152,6 +152,18 @@ jQuery(document).ready(function($) {
     },
   });
 
+  $().fancybox({
+    selector : '[data-fancybox="group"]',
+    thumbs   : false,
+    hash     : false,
+    // animationEffect : "fade",
+    beforeClose : function(instance) {
+      // Update position of the slider
+      productSlider.slideTo( instance.currIndex, 0 );
+      
+    }
+  });
+
   function simpleParallax(intensity, element) {
     $(window).scroll(function() {
       var scrollTop = $(window).scrollTop();

@@ -50,7 +50,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
   return gulp.src('app/js/common.js')
   .pipe(gp.plumber())
-  // .pipe(gp.uglify())
+  .pipe(gp.uglify())
   .pipe(gp.rename({suffix: '.min'}))
   .pipe(gulp.dest('build/js'))
   .pipe(browserSync.stream());

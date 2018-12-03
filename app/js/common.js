@@ -30,6 +30,21 @@ jQuery(document).ready(function($) {
     $('.mobile-menu').toggleClass('open');
   });
 
+  var fixedHeader = function() {
+    if($(this).scrollTop() >= 85) {
+      $('.header__bottom').addClass('fixed');
+    }
+    else {
+      $('.header__bottom').removeClass('fixed');
+    }
+  }
+
+  fixedHeader();
+
+  $(window).scroll(function() {
+    fixedHeader();
+  });
+
   // Modal
   $('.modal').popup({
     transition: 'all 0.3s',

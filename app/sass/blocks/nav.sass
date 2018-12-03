@@ -109,6 +109,11 @@
         top: 0
         transform: rotate(-45deg)
 
++media-breakpoint-down(lg)
+  .nav-list
+    li
+      margin-right: 50px
+
 +media-breakpoint-down(sm)
   .nav-toggle
     display: block
@@ -117,3 +122,5 @@
   .nav-list .sub-menu
     overflow-y: auto
     height: calc(100vh - 137px)
+  .mobile-menu .nav-list .sub-menu
+    height: auto

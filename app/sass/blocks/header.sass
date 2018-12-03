@@ -1,5 +1,5 @@
 .header
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   right: 0
@@ -11,7 +11,41 @@
     &-right
       display: flex
   &__bottom
+    position: relative
     background-color: rgba(#000, 0.5)
+    +transition
+    &-logo
+      
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      transition: none
+    &-phone
+      
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      +transition
+    &.fixed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      padding: 10px 0
+      .header
+        &__bottom
+          &-logo
+            position: static
+            opacity: 1
+            visibility: visible
+            width: auto
+            height: auto
+          &-phone
+            position: relative
+            opacity: 1
+            visibility: visible
+            width: auto
+            height: auto
   &__wrap
     display: flex
     justify-content: space-between
@@ -32,9 +66,13 @@
     &__phone
       &-address
         display: none
+    &__bottom
+      &-phone
+        display: none
 
 +media-breakpoint-down(sm)
   .header
+    position: fixed
     &__wrap
       position: relative
     &__phone

@@ -71,3 +71,38 @@
   float: right
   margin-left: 2.14em
   margin-bottom: 1em
+
+.loading
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(#fff, 0.8)
+    z-index: 2
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 50px
+    height: 50px
+    margin-top: -25px
+    margin-left: -25px
+    border: 3px solid $bittersweet
+    border-top: 3px solid $mercury
+    border-right: 3px solid $mercury
+    border-left: 3px solid $mercury
+    border-radius: 50em
+    transition: all .25s ease
+    animation: spin 1s linear infinite
+    z-index: 3
+
+@keyframes spin
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)

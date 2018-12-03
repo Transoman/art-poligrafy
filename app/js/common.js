@@ -177,9 +177,10 @@ jQuery(document).ready(function($) {
     hash     : false,
     // animationEffect : "fade",
     beforeClose : function(instance) {
-      // Update position of the slider
-      productSlider.slideTo( instance.currIndex, 0 );
-      
+      if ($('.product__slider').length) {
+        // Update position of the slider
+        productSlider.slideTo( instance.currIndex, 0 );
+      }
     }
   });
 

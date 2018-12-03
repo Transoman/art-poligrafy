@@ -63,7 +63,8 @@ gulp.task('script', function() {
       'node_modules/jquery-validation/dist/jquery.validate.min.js',
       'node_modules/swiper/dist/js/swiper.min.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-      'node_modules/imask/dist/imask.min.js'
+      'node_modules/imask/dist/imask.min.js',
+      'node_modules/aos/dist/aos.js'
     ])
   .pipe(gp.concat('script.js'))
   .pipe(gp.uglify())

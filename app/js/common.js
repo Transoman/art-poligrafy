@@ -17,6 +17,10 @@ $(window).on('load', function () {
 
 jQuery(document).ready(function($) {
 
+  AOS.init({
+    duration: 800
+  });
+
   if ( localStorage.getItem('preloader') == 'hide') {
     $preloader = $('.preloader'),
     $loader = $preloader.find('.preloader__wrap');

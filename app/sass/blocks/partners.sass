@@ -30,3 +30,21 @@
         transform: scale(1.1)
   .swiper-pagination
     bottom: 0
+
++media-breakpoint-down(xs)
+  .partners
+    .section-title
+      span
+        &::before
+          height: 50px
+          top: auto
+          bottom: -15px
+        &::after
+          content: ''
+          position: absolute
+          right: 20px
+          top: auto
+          bottom: -15px
+          width: 1px
+          height: 50px
+          background-color: $bittersweet

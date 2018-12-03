@@ -2,7 +2,21 @@
   position: relative
   padding-bottom: 125px
   .section-title
-    margin-left: -40px
+    margin-bottom: 45px
+    text-align: center
+    span
+      &::before
+        height: 70px
+        left: 20px
+      &::after
+        content: ''
+        position: absolute
+        bottom: auto
+        right: 20px
+        left: auto
+        width: 1px
+        height: 70px
+        background-color: $bittersweet
   &__link
     position: relative
     top: -30px
@@ -63,7 +77,20 @@
   .testimonial
     padding-bottom: 0
     .section-title
-      margin-left: 0
+      span
+        &::before
+          height: 50px
+          top: auto
+          bottom: -15px
+        &::after
+          content: ''
+          position: absolute
+          right: 20px
+          top: auto
+          bottom: -15px
+          width: 1px
+          height: 50px
+          background-color: $bittersweet
 
 +r(480)
   .testimonial-slider

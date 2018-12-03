@@ -79,15 +79,20 @@ jQuery(document).ready(function($) {
 
   // Slider
   var heroSlider = new Swiper ('.hero-slider', {
+    speed: 1000,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    },
+    autoplay: {
+      delay: 5000,
     },
   });
 
   var partnersSlider = new Swiper ('.partners-slider', {
     slidesPerView: 6,
     slidesPerGroup: 6,
+    speed: 1000,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -109,7 +114,10 @@ jQuery(document).ready(function($) {
         slidesPerView: 1,
         slidesPerGroup: 1,
       },
-    }
+    },
+    autoplay: {
+      delay: 5000,
+    },
   });
 
   var testimonialSlider = new Swiper ('.testimonial-slider', {
@@ -180,13 +188,13 @@ jQuery(document).ready(function($) {
     }
   }
 
-  $('.products__item .order_open').click(function() {
+  $('body').on('click', '.products__item .order_open', function() {
     var title = $(this).parents('.products__item').find('h3').find('a').text();
     $('#order h3').text('Заказать ' + title);
     $('#order input[name="subject"]').val('Заказ ' + title);
   });
 
-  $('.products__item .cost_open').click(function() {
+  $('body').on('click', '.products__item .cost_open', function() {
     var title = $(this).parents('.products__item').find('h3').find('a').text();
     $('#cost input[name="subject"]').val('Узнать стоимость (' + title + ')');
   });
@@ -203,6 +211,7 @@ jQuery(document).ready(function($) {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
+        testimonial: "Введите Ваш отзыв",
       },
       rules: {
         "phone": {

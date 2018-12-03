@@ -8,7 +8,7 @@
     margin-right: 70px
     &:last-child
       margin-right: 0
-    &.has-child
+    &.menu-item-has-children
       > a
         padding-right: 15px
         position: relative
@@ -22,7 +22,7 @@
           font-size: 11px
           color: $bittersweet
     &:hover
-      > .sublist
+      > .sub-menu
         display: block
   a
     display: block
@@ -34,7 +34,7 @@
     text-decoration: none
     &:hover
       color: $bittersweet
-  .sublist
+  .sub-menu
     display: none
     position: absolute
     top: 100%
@@ -114,6 +114,6 @@
     display: block
 
 @media (max-height: 768px) and (min-width: 768px) and (max-width: 1366px)
-  .nav-list .sublist
+  .nav-list .sub-menu
     overflow-y: auto
     height: calc(100vh - 137px)

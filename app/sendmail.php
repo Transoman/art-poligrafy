@@ -8,7 +8,7 @@
       $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : '';
       $phone = isset($_POST['phone']) ? htmlspecialchars(trim($_POST['phone'])) : '';
       $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : '';
-      $message = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : '';
+      $testimonial = isset($_POST['testimonial']) ? htmlspecialchars(trim($_POST['testimonial'])) : '';
       $email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : 'no-reply@yandex.com';
 
       $headers = "From: $SITE_TITLE \r\n";
@@ -19,8 +19,8 @@
       $data .= 'Имя: '.$name."<br>";
       $data .= 'Телефон: '.$phone."<br>";
 
-      if ($message) {
-        $data .= 'Вопрос: '.$message."<br>";
+      if ($testimonial) {
+        $data .= 'Отзыв: '.$testimonial."<br>";
       }
   
       $message = "<div style='background:#ccc;border-radius:10px;padding:20px;'>

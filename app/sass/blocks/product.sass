@@ -30,6 +30,10 @@
         background-color: $bittersweet
         .fas
           color: #fff
+    &-item
+      img
+        display: block
+        margin: 0 auto
   &__info
     width: 42.5%
   &__meta
@@ -106,29 +110,30 @@
     &-note
       color: $main-color
   &__table
-    width: 100%
-    font-weight: 300
-    background-color: #fff
-    tr
-      border-bottom: 1px solid $mercury
-    td
-      white-space: nowrap
-      padding: 15px
-      border-right: 1px solid $mercury
-      border-left: 1px solid $mercury
-      vertical-align: middle
-      &:first-child
-        width: 17.24%
-        padding-left: 25px
-    tbody
-      tr
-        &:nth-child(2n)
-          background-color: $chablis
     &-price
       margin-bottom: 20px
       box-shadow: 0 15px 30px rgba(#000, 0.15)
     &-wrap
       overflow-x: auto
+      table
+        width: 100%
+        font-weight: 300
+        background-color: #fff
+        tr
+          border-bottom: 1px solid $mercury
+        td
+          white-space: nowrap
+          padding: 15px
+          border-right: 1px solid $mercury
+          border-left: 1px solid $mercury
+          vertical-align: middle
+          &:first-child
+            width: 17.24%
+            padding-left: 25px
+        tbody
+          tr
+            &:nth-child(2n)
+              background-color: $chablis
     &-head
       margin: 0
       padding: 15px

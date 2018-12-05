@@ -175,6 +175,7 @@ jQuery(document).ready(function($) {
     selector : '[data-fancybox="group"]',
     thumbs   : false,
     hash     : false,
+    loop: true,
     // animationEffect : "fade",
     beforeClose : function(instance) {
       if ($('.product__slider').length) {

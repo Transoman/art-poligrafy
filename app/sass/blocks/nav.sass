@@ -21,6 +21,11 @@
           font-weight: 900
           font-size: 11px
           color: $bittersweet
+    &.menu-item-object-product
+      > .sub-menu
+        min-width: 690px
+        column-count: 3
+        column-gap: 50px
     &:hover
       > .sub-menu
         display: block
@@ -113,6 +118,14 @@
   .nav-list
     li
       margin-right: 50px
+
++media-breakpoint-down(md)
+  .nav-list
+    li
+      &.menu-item-object-product
+        > .sub-menu
+          min-width: 550px
+          column-gap: 20px
 
 +media-breakpoint-down(sm)
   .nav-toggle
